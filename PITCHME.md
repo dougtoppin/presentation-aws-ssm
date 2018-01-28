@@ -1,7 +1,18 @@
-# AWS SSM
+## AWS SSM
+
+AWS DC Meetup
+
+6-Feb-2018
+
+[https://github.com/dougtoppin/presentation-aws-ssm](https://github.com/dougtoppin/presentation-aws-ssm)
+
+Doug Toppin
+
+@dougtoppin
+
 
 ---
-## Agenda
+### Agenda
 
 * SSM
 * Parameter Store
@@ -13,7 +24,7 @@
 "AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the configuration of your managed instances. A managed instance is any Amazon EC2 instance or on-premises machine in your hybrid environment that has been configured for Systems Manager."
 
 ---
-## Why use it?
+### Why use it?
 
 * improves security
 * decreases cost (no bastion host instance)
@@ -25,7 +36,7 @@
 
 ---
 
-## How does it work?
+### How does it work?
 
 * SSM agent running on host
 * agent is pre-loaded on AMZN Linux instances
@@ -34,7 +45,7 @@
 
 ---
 
-## What is in it?
+### What is in it?
 
 * Run Command
 * State Manager
@@ -47,7 +58,7 @@
 
 ---
 
-## Things that are different
+### Things that are different
 
 * (probably) must have aggregated logging/CloudWatch because no direct access
 * cannot directly ssh
@@ -56,7 +67,7 @@
 
 ---
 
-# Parameter Store
+## Parameter Store
 
 ---
 
@@ -64,14 +75,14 @@
 
 ---
 
-## What can you use it for?
+### What can you use it for?
 * KVPs
 * global to the account
 * IAM access controlled
 * values can be encrypted
 
 ---
-## Why use it?
+### Why use it?
 
 * can be accessed from the cli, CloudFormation, others
 * reduce distribution/copies of things
@@ -79,11 +90,13 @@
 
 ---
 
-## Examples
+### Examples
 
 ```
-aws ssm put-parameter --name /db/dev/password --value password1 --type String --overwrite
-aws ssm put-parameter --name /db/prod/password --value password2 --type String --overwrite
+aws ssm put-parameter --name /db/dev/password --value password1 \
+    --type String --overwrite
+aws ssm put-parameter --name /db/prod/password --value password2 \
+    --type String --overwrite
 
 aws ssm describe-parameters --filters "Key=Name,Values=/dev/db/password"
 aws ssm describe-parameters --filters "Key=Name,Values=/dev"
@@ -91,7 +104,7 @@ aws ssm describe-parameters --filters "Key=Name,Values=/dev"
 
 ---
 
-## Demo - SSM Run Command
+### Demo - SSM Run Command
 
 * ECS cluster
 * execute on all instances
@@ -99,7 +112,7 @@ aws ssm describe-parameters --filters "Key=Name,Values=/dev"
 
 ---
 
-## Demo - Parameter Store
+### Demo - Parameter Store
 
 * cli set
 * cli get
@@ -108,7 +121,7 @@ aws ssm describe-parameters --filters "Key=Name,Values=/dev"
 
 ---
 
-## Links
+### Links
 
 * [https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html)
 * [https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html)
