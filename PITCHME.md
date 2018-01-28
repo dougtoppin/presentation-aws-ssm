@@ -90,7 +90,7 @@ Doug Toppin
 
 ---
 
-### Examples
+### Examples - AWS CLI
 
 ```
 aws ssm put-parameter --name /db/dev/password --value password1 \
@@ -102,6 +102,21 @@ aws ssm describe-parameters --filters "Key=Name,Values=/dev/db/password"
 aws ssm describe-parameters --filters "Key=Name,Values=/dev"
 ```
 
+---
+
+### Examples - CloudFormation
+
+```
+"Parameters" : {
+...
+    "DBPassword": {
+        "Type" : 'AWS::SSM::Parameter::Value<String>',
+        "Default" : "/dev/db/password"
+    }
+...
+}
+
+```
 ---
 
 ### Demo - SSM Run Command
