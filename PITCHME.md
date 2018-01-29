@@ -10,14 +10,13 @@ Doug Toppin
 
 @dougtoppin
 
-
 ---
 ### Agenda
 
-* SSM
+* SSM (primarily Run Command)
 * Parameter Store
 * Demos
-
+* Links
 
 ---
 
@@ -27,12 +26,13 @@ Doug Toppin
 ### Why use it?
 
 * improves security
+* automation reduces mistakes
 * decreases cost (no bastion host instance)
-* controls access by IAM
-* scripts ("documents") can be controlled
+* access controlled by IAM
+* scripts ("documents") can be controlled and versioned
 * can manage EC2 or local instances
 * automates many typical functions
-* Linux and Windows
+* Linux and Windows supported
 
 ---
 
@@ -40,7 +40,7 @@ Doug Toppin
 
 * SSM agent running on host
 * agent is pre-loaded on AMZN Linux instances
-* policy must allow it
+* policies/permissions for the instance must allow it
 * instance must appear as a "Managed Instance"
 
 ---
@@ -53,8 +53,6 @@ Doug Toppin
 * Automation
 * Parameter Store
 * Maintenance Windows
-
-
 
 ---
 
@@ -84,7 +82,7 @@ Doug Toppin
 ---
 ### Why use it?
 
-* can be accessed from the cli, CloudFormation, others
+* can be accessed from the aws cli, CloudFormation, others
 * reduce distribution/copies of things
 * audited in CloudTrail, notifications (know when something changes)
 
