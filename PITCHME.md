@@ -4,7 +4,7 @@ AWS DC Meetup
 
 6-Feb-2018
 
-[https://github.com/dougtoppin/presentation-aws-ssm](https://github.com/dougtoppin/presentation-aws-ssm)
+[github.com/dougtoppin/presentation-aws-ssm](https://github.com/dougtoppin/presentation-aws-ssm)
 
 Doug Toppin
 
@@ -136,6 +136,6 @@ aws ssm describe-parameters --filters "Key=Name,Values=/dev"
 
 ### Links
 
-* [https://github.com/dougtoppin/presentation-aws-ssm](https://github.com/dougtoppin/presentation-aws-ssm)
+* [github.com/dougtoppin/presentation-aws-ssm](https://github.com/dougtoppin/presentation-aws-ssm)
 * [https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html)
 * [https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html)
