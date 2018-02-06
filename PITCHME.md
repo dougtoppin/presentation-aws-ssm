@@ -153,5 +153,6 @@ aws ssm describe-parameters --filters "Key=Name,Values=/dev"
 ### Links
 
 * [github.com/dougtoppin/presentation-aws-ssm](https://github.com/dougtoppin/presentation-aws-ssm)
-* [https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html)
-* [https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html)
+* [docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/systems-manager/latest/APIReference/Welcome.html)
+* [docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html)
+* [github.com/awslabs/ecs-refarch-cloudformation](https://github.com/awslabs/ecs-refarch-cloudformation)
