@@ -8,6 +8,8 @@ AWS DC Meetup
 
 Doug Toppin
 
+dougtoppin@gmail.com
+
 @dougtoppin
 
 ---
@@ -20,19 +22,31 @@ Doug Toppin
 
 ---
 
+## SSM
+
+---
+
 "AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the configuration of your managed instances. A managed instance is any Amazon EC2 instance or on-premises machine in your hybrid environment that has been configured for Systems Manager."
 
 ---
+
 ### Why use it?
 
 * improves security
 * automation reduces mistakes
 * decreases cost (no bastion host instance)
 * access controlled by IAM
+* fewer things are public (such as RDS access)
+
+---
+
+### Why use it?
+
 * scripts ("documents") can be controlled and versioned
 * can manage EC2 or local instances
-* automates many typical functions
+* can automate many typical functions
 * Linux and Windows supported
+* ops and developers can use it (console or cli)
 
 ---
 
@@ -42,6 +56,7 @@ Doug Toppin
 * agent is pre-loaded on AMZN Linux instances
 * policies/permissions for the instance must allow it
 * instance must appear as a "Managed Instance"
+* multiple hosts can be acted on asynchronously/simultaneously
 
 ---
 
@@ -58,10 +73,10 @@ Doug Toppin
 
 ### Things that are different
 
-* (probably) must have aggregated logging/CloudWatch because no direct access
+* (probably) should have aggregated logging/CloudWatch because no direct access
 * cannot directly ssh
 * must be comfortable with shell/cli access or use stored documents
-* asynchronous execution, results and potential available later
+* asynchronous, results and potential output available after hosts complete execution
 
 ---
 
@@ -74,7 +89,7 @@ Doug Toppin
 ---
 
 ### What can you use it for?
-* KVPs
+* key value pairs (KVPs)
 * global to the account
 * IAM access controlled
 * values can be encrypted
@@ -83,6 +98,7 @@ Doug Toppin
 ### Why use it?
 
 * can be accessed from the aws cli, CloudFormation, others
+* centralize the values of things
 * reduce distribution/copies of things
 * audited in CloudTrail, notifications (know when something changes)
 
